@@ -34,6 +34,7 @@ const navItems = [
 ] as const;
 
 const news = [
+  ["2025", "Six first-author papers were selected for the homepage, spanning knowledge graph completion, legal judgment prediction and continual pre-training."],
   ["2025.06", "SEMKR was published in Neurocomputing."],
   ["2025.05", "JurisTeller research materials and reproducible code were organized on GitHub."],
   ["2024.12", "Presented recent work on semantic-aware legal judgment prediction and knowledge graph completion."],
@@ -52,9 +53,12 @@ const projects = [
 ];
 
 const publications = [
-  ["Neurocomputing · 2025", "SEMKR: Joint Learning of Semantic and Topological Representations for Knowledge Graph Completion", "Pengjie Liu, W. Zhang, Y. Ding, J. Jiang, S.-H. Yang"],
-  ["IEEE SMC · 2024", "SEMDR: A Semantic-Aware Dual Encoder Model for Legal Judgment Prediction with Legal Clue Tracing", "Pengjie Liu, W. Zhang, Y. Ding, X. Zhang, S.-H. Yang"],
-  ["ADMA · 2024", "MUSE: Integrating Multi-Knowledge for Knowledge Graph Completion", "Pengjie Liu"],
+  ["ICMLC & ICWAPR · 2024 · Finalist, Lotfi Zadeh Best Paper Awards", "MUSE: Multi-knowledge Passing on the Edges, Boosting Knowledge Graph Completion", "Pengjie Liu · First author"],
+  ["IEEE SMC · 2024 · Long paper · CCF-C", "SEMDR: A Semantic-Aware Dual Encoder Model for Legal Judgment Prediction with Legal Clue Tracing", "Pengjie Liu · First author"],
+  ["ADMA · 2024 · Long paper · CCF-C", "MUSE: Integrating Multi-Knowledge for Knowledge Graph Completion", "Pengjie Liu · First author"],
+  ["DASFAA · 2025 · Long oral presentation · CCF-B", "JurisNexus: Enhancing Legal Judgment Prediction via Cross-Reasoning-Chain Representation Learning Mechanism", "Pengjie Liu · First author"],
+  ["Neurocomputing · 2025 · JCR Q1 · Impact factor 6.5", "SEMKR: Joint Learning of Semantic and Topological Representations for Knowledge Graph Completion", "Pengjie Liu · First author"],
+  ["ICIC · 2025 · Long paper · CCF-C", "ECHO: Enhancing Knowledge Graph Completion via Multi-source Knowledge Representation Learning Mechanism with Continual Pre-training", "Pengjie Liu · First author"],
   ["arXiv · 2024", "LegalDuet: Learning Effective Representations for Legal Judgment Prediction through a Dual-View Legal Clue Reasoning", "Pengjie Liu, Z. Liu, X. Yi, L. Yang, S. Wang, Y. Gu, G. Yu, X. Xie, S. Yang"],
 ];
 
