@@ -53,17 +53,21 @@ const projects = [
 ];
 
 const publications = [
-  ["ICMLC & ICWAPR · 2024 · Finalist, Lotfi Zadeh Best Paper Awards", "MUSE: Multi-knowledge Passing on the Edges, Boosting Knowledge Graph Completion", "Pengjie Liu · First author"],
-  ["IEEE SMC · 2024 · Long paper · CCF-C", "SEMDR: A Semantic-Aware Dual Encoder Model for Legal Judgment Prediction with Legal Clue Tracing", "Pengjie Liu · First author"],
-  ["ADMA · 2024 · Long paper · CCF-C", "MUSE: Integrating Multi-Knowledge for Knowledge Graph Completion", "Pengjie Liu · First author"],
-  ["DASFAA · 2025 · Long oral presentation · CCF-B", "JurisNexus: Enhancing Legal Judgment Prediction via Cross-Reasoning-Chain Representation Learning Mechanism", "Pengjie Liu · First author"],
-  ["Neurocomputing · 2025 · JCR Q1 · Impact factor 6.5", "SEMKR: Joint Learning of Semantic and Topological Representations for Knowledge Graph Completion", "Pengjie Liu · First author"],
-  ["ICIC · 2025 · Long paper · CCF-C", "ECHO: Enhancing Knowledge Graph Completion via Multi-source Knowledge Representation Learning Mechanism with Continual Pre-training", "Pengjie Liu · First author"],
+  ["ICMLC & ICWAPR · 2024 · Finalist, Lotfi Zadeh Best Paper Awards", "MUSE: Multi-knowledge Passing on the Edges, Boosting Knowledge Graph Completion", "Pengjie Liu"],
+  ["IEEE SMC · 2024 · Long paper · CCF-C", "SEMDR: A Semantic-Aware Dual Encoder Model for Legal Judgment Prediction with Legal Clue Tracing", "Pengjie Liu, Wang Zhang, Yulong Ding, Xuefeng Zhang, Shuang-Hua Yang"],
+  ["ADMA · 2024 · Long paper · CCF-C", "MUSE: Integrating Multi-Knowledge for Knowledge Graph Completion", "Pengjie Liu"],
+  ["DASFAA · 2025 · Long oral presentation · CCF-B", "JurisNexus: Enhancing Legal Judgment Prediction via Cross-Reasoning-Chain Representation Learning Mechanism", "Pengjie Liu, Xiaoqing Zhang, Yulong Ding, Shuang-Hua Yang"],
+  ["Neurocomputing · 2025 · JCR Q1 · Impact factor 6.5", "SEMKR: Joint Learning of Semantic and Topological Representations for Knowledge Graph Completion", "Pengjie Liu, Wang Zhang, Yulong Ding, Jie Jiang, Shuang-Hua Yang"],
+  ["ICIC · 2025 · Long paper · CCF-C", "ECHO: Enhancing Knowledge Graph Completion via Multi-source Knowledge Representation Learning Mechanism with Continual Pre-training", "Pengjie Liu, Wang Zhang, Yulong Ding, Shuang-Hua Yang"],
   ["arXiv · 2024", "LegalDuet: Learning Effective Representations for Legal Judgment Prediction through a Dual-View Legal Clue Reasoning", "Pengjie Liu, Z. Liu, X. Yi, L. Yang, S. Wang, Y. Gu, G. Yu, X. Xie, S. Yang"],
 ];
 
 function Link({ href, children }: { href: string; children: ReactNode }) {
   return <a className="text-link" href={href} target="_blank" rel="noreferrer">{children}<ArrowUpRight size={14} /></a>;
+}
+
+function Authors({ value }: { value: string }) {
+  return <>{value.split(", ").map((author, index) => <span className={index === 0 ? "pub-author-me" : undefined} key={author}>{index > 0 ? ", " : ""}{author}</span>)}</>;
 }
 
 export default function Home() {
@@ -105,7 +109,7 @@ export default function Home() {
 
         <section className="section-block" id="services"><div className="section-heading"><span className="section-index">05</span><h3>Academic services</h3></div><div className="service-grid"><div><BriefcaseBusiness size={19} /><h4>Research collaboration</h4><p>Open to discussions on legal NLP, retrieval, knowledge graphs and reproducible research.</p></div><div><GraduationCap size={19} /><h4>Peer review</h4><p>Available for research conversations and peer review in information retrieval and legal AI.</p></div></div></section>
 
-        <section className="section-block publications-section" id="publications"><div className="section-heading"><span className="section-index">06</span><h3>Publications</h3><Link href={scholarUrl}>Full list on Scholar</Link></div><p className="publication-note">Selected work · please follow the linked scholarly record for the latest publication status.</p><div className="publication-list">{publications.map(([venue, title, authors], index) => <article className="publication-row" key={title}><div className="publication-number">{String(index + 1).padStart(2, "0")}</div><div className="publication-body"><p className="publication-venue">{venue}</p><h4>{title}</h4><p className="publication-authors">{authors}</p></div><Link href={scholarUrl}>Scholar</Link></article>)}</div></section>
+        <section className="section-block publications-section" id="publications"><div className="section-heading"><span className="section-index">06</span><h3>Publications</h3><Link href={scholarUrl}>Full list on Scholar</Link></div><p className="publication-note">Selected work · please follow the linked scholarly record for the latest publication status.</p><div className="publication-list">{publications.map(([venue, title, authors], index) => <article className="publication-row" key={title}><div className="publication-number">{String(index + 1).padStart(2, "0")}</div><div className="publication-body"><p className="publication-venue">{venue}</p><h4>{title}</h4><p className="publication-authors"><Authors value={authors} /></p></div><Link href={scholarUrl}>Scholar</Link></article>)}</div></section>
 
         <section className="section-block contact-section" id="contact"><div className="section-heading"><span className="section-index">07</span><h3>Contact</h3></div><div className="contact-grid"><div><p className="contact-lead">For research collaboration, academic discussion or questions about the projects, please write by email.</p><a className="contact-email" href={email}>pengjieliu@sustech.edu.cn <ArrowUpRight size={16} /></a></div><div className="contact-links"><Link href={githubUrl}>GitHub repositories</Link><Link href={scholarUrl}>Google Scholar profile</Link></div></div></section>
 
