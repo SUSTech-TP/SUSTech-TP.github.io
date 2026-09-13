@@ -35,7 +35,7 @@ const navItems = [
 
 const news = [
   ["2026.08", "JurisTeller (诸事泰乐), a legal foundation model, was launched."],
-  ["2026.06", "JurisNexus was published in the DASFAA 2026 proceedings."],
+  ["2026.06", "JurisNexus: Enhancing Legal Judgment Prediction via Cross-Reasoning-Chain Representation Learning Mechanism was published in the DASFAA 2026 proceedings."],
   ["2025.11", "SEMKR: Joint Learning of Semantic and Topological Representations for Knowledge Graph Completion was published in Neurocomputing."],
   ["2025", "Six first-author papers were selected for the homepage, spanning knowledge graph completion, legal judgment prediction and continual pre-training."],
   ["2025.06", "SEMKR was published in Neurocomputing."],
