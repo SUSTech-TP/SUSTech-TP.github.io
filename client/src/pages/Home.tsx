@@ -41,7 +41,7 @@ const news = [
   ["2025.06", "SEMKR was published in Neurocomputing."],
   ["2025.05", "JurisTeller research materials and reproducible code were organized on GitHub."],
   ["2024.12", "Presented recent work on semantic-aware legal judgment prediction and knowledge graph completion."],
-  ["2023.06", "SEMDR: A Semantic-Aware Dual Encoder Model for Legal Judgment Prediction with Legal Clue Tracing was published at IEEE SMC 2024."],
+  ["2024.10", "SEMDR: A Semantic-Aware Dual Encoder Model for Legal Judgment Prediction with Legal Clue Tracing was published at IEEE SMC 2024."],
 ];
 
 const education = [
